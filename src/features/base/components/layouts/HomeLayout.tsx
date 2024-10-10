@@ -1,7 +1,6 @@
 import { Grid, GridItem, Text } from "@chakra-ui/react";
-import React from "react";
-import HomePost from "../page/home/HomePost";
 import HomeItem from "../page/home/HomeItem";
+import HomePost from "../page/home/HomePost";
 
 function HomeLayout() {
   return (

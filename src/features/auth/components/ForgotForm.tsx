@@ -1,12 +1,11 @@
-import React from "react";
 import {
-  Card,
-  Input,
-  CardBody,
   Box,
+  Button,
+  Card,
+  CardBody,
   Container,
   FormControl,
-  Button,
+  Input,
 } from "@chakra-ui/react";
 import TitleAuth, { LabelAuth } from "../../ui/LabelAuth";
 

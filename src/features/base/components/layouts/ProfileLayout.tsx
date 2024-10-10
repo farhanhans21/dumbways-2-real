@@ -1,5 +1,5 @@
 
-import { Avatar, Box, Button, Flex, Grid, GridItem, Text } from '@chakra-ui/react'
+import { Box, Flex } from '@chakra-ui/react'
 import ProfileInfo from '../page/profile/ProfileInfoThreads'
 import ProfilePost from '../page/profile/ProfileItem'
 

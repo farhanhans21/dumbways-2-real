@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { ResetForm } from "../../types/dto";
+import { ResetPasswordForm } from "../../types/dto";
 
 import React from "react";
 
 function userResetForm() {
-  const [resetForm, setResetForm] = useState<ResetForm>({
+  const [resetForm, setResetForm] = useState<ResetPasswordForm>({
     password: "",
-    passwordConfirm: "",
+    confirmPassword: "",
   });
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setResetForm({ ...resetForm, [e.target.name]: e.target.value });

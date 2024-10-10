@@ -1,8 +1,8 @@
-import React, { useEffect } from "react"
-import { apiV1 } from "../../../libs/api";
 import Cookies from 'js-cookie';
-import  ButtonLink  from "./LinkButton";
+import React, { useEffect } from "react";
 import { FaHeart } from "react-icons/fa";
+import { apiV1 } from "../../../libs/api";
+import ButtonLink from "./LinkButton";
 
 interface LikeButtonProps {
     postId: number
@@ -10,7 +10,7 @@ interface LikeButtonProps {
 
 const LikeButtonPost: React.FC<LikeButtonProps> = ({ postId }) => {
     const [isLiked, setIsLiked] = React.useState(false);
-    const [likeCount, setLikeCount] = React.useState(0);
+    const [likesCount, setLikeCount] = React.useState(0);
 
     useEffect(() => {
         const fetchLike = async () => {

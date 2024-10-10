@@ -1,15 +1,15 @@
 import {
-  Card,
-  Input,
-  CardBody,
   Box,
+  Button,
+  Card,
+  CardBody,
   Container,
   FormControl,
+  Input,
   Link,
-  Button,
 } from "@chakra-ui/react";
-import TitleAuth, { LabelAuth } from "../../ui/LabelAuth";
 import { useNavigate } from "react-router-dom";
+import TitleAuth from "../../ui/LabelAuth";
 import useRegisterForm from "../hooks/use-register-form";
 function RegisterForm() {
   const navigate = useNavigate();

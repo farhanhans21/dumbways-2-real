@@ -1,5 +1,4 @@
-import { Box, WrapItem, Avatar, Text, Wrap, Image } from "@chakra-ui/react";
-import React from "react";
+import { Avatar, Box, Image, Text, Wrap, WrapItem } from "@chakra-ui/react";
 
 function DevDesc() {
   return (

@@ -1,34 +1,17 @@
-import React, { useState } from "react";
 import {
+  Avatar,
   Box,
   Container,
-  Avatar,
-  IconButton,
   Image,
-  useColorModeValue,
-  Text,
+  Text
 } from "@chakra-ui/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { LabelName } from "../../../../ui/LabelAuth";
-import {
-  faHeart as filledHeart,
-  faHeart as regularHeart,
-  faComment,
-} from "@fortawesome/free-solid-svg-icons";
-import { motion } from "framer-motion";
-import { userAllPosts } from "../../../hooks/use-all";
 import ButtonLink from "../../../buttons/LinkButton";
+import { userAllPosts } from "../../../hooks/use-all";
 
 function HomeItem() {
-  const [isLiked, setIsLiked] = useState(false);
 
-  const handleLikeToggle = () => {
-    setIsLiked(!isLiked);
-  };
 
   const { data } = userAllPosts();
-  // Framer Motion animation for the button
-  const MotionIconButton = motion(IconButton);
 
   return (
     <>

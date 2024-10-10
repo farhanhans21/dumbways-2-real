@@ -9,12 +9,12 @@ import {
   Input,
   Stack,
 } from "@chakra-ui/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { usePost } from "../../../hooks/use-post";
 
 function HomePost() {
-  const { register, handleSubmit, errors, onSubmit, isSubmitting, isLoading } =
+  const { register, handleSubmit, onSubmit } =
     usePost();
 
   return (

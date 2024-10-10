@@ -1,12 +1,10 @@
 import {
-  Text,
-  Box,
-  Wrap,
-  WrapItem,
   Avatar,
+  Box,
   Button,
-  VStack,
   HStack,
+  Text,
+  VStack
 } from "@chakra-ui/react";
 
 function Followers() {

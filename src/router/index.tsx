@@ -1,13 +1,12 @@
-import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { ForgotForm, LoginForm, RegisterForm, ResetForm } from '../features/auth'
 import Base from '../features/base/components/layouts/Base'
+import FollowsLayout from '../features/base/components/layouts/FollowsLayout'
 import HomeLayout from '../features/base/components/layouts/HomeLayout'
 import ProfileLayout from '../features/base/components/layouts/ProfileLayout'
-import FollowsLayout from '../features/base/components/layouts/FollowsLayout'
+import SearchLayout from '../features/base/components/layouts/SearchLayout'
 import FollowItem from '../features/base/components/page/follows/FollowerItem'
 import FollowingItem from '../features/base/components/page/follows/FollowingItem'
-import SearchLayout from '../features/base/components/layouts/SearchLayout'
 
 
 function AppRouter() {

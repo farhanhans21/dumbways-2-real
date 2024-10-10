@@ -1,20 +1,12 @@
 import {
-  Box,
-  Center,
-  Input,
-  Tabs,
-  TabList,
-  TabPanels,
   Tab,
-  TabPanel,
   TabIndicator,
-  useColorModeValue,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs
 } from "@chakra-ui/react";
-import ButtonLink from "../../buttons/LinkButton";
-import { Outlet } from "react-router";
-import FollowItem from "../page/follows/FollowerItem";
-import FollowingItem from "../page/follows/FollowerItem";
-import { useState } from "react";
+import { default as FollowingItem, default as FollowItem } from "../page/follows/FollowerItem";
 function FollowsLayout() {
   
   return (

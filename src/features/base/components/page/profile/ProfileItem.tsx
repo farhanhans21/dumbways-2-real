@@ -1,19 +1,19 @@
 import {
+  Avatar,
   Box,
   Container,
-  Avatar,
   IconButton,
   useColorModeValue,
 } from "@chakra-ui/react";
-import React, {useState} from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faComment,
   faHeart as filledHeart,
   faHeart as regularHeart,
-  faComment,
 } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
-import { LabelName } from '../../../../ui/LabelAuth'
+import { useState } from "react";
+import { LabelName } from '../../../../ui/LabelAuth';
 
 
 function ProfileItem() {

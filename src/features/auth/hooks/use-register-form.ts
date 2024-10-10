@@ -1,14 +1,13 @@
-import React, { useState } from "react";
-import  {RegisterResponseDTO} from "../../types/register-dto";
 import { useNavigate } from "react-router";
-import { RegisterFormInput, registerSchema } from "../schema/register.schema";
 import { apiV1 } from "../../../libs/api";
 import { setUser } from "../../store/auth.slice";
+import { RegisterResponseDTO } from "../../types/register-dto";
+import { RegisterFormInput, registerSchema } from "../schema/register.schema";
 
-import Cookies from "js-cookie";
-import axios from "axios";
-import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import axios from "axios";
+import Cookies from "js-cookie";
+import { useForm } from "react-hook-form";
 import { useAppDispatch } from "../../store/hooks/use-store";
 
 function useRegisterForm() {

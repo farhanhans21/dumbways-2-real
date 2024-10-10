@@ -1,10 +1,9 @@
-import React from 'react'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Box, Input } from '@chakra-ui/react';
 import {
   faMagnifyingGlass
 } from "@fortawesome/free-solid-svg-icons";
-import { Input,Box } from '@chakra-ui/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function SearchLayout() {
   return (

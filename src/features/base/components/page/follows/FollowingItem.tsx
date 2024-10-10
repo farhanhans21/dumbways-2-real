@@ -1,5 +1,4 @@
 import { Avatar, Box, Button, HStack, Text, VStack } from '@chakra-ui/react';
-import React from 'react'
 
 function FollowingItem() {
   

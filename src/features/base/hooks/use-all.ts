@@ -1,9 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
-import { GetPostEntity } from "../../../entities/post-entity";
-import { apiV1 } from "../../../libs/api";
-import { useParams, useSearchParams } from "react-router-dom";
-import { UserEntity } from "../../../entities/user-entity";
 import Cookies from "js-cookie";
+import { useParams } from "react-router-dom";
+import { GetPostEntity } from "../../../entities/post-entity";
+import { UserEntity } from "../../../entities/user-entity";
+import { apiV1 } from "../../../libs/api";
 export function userAllPosts() {
   async function getAllPosts() {
     const response = await apiV1.get<null, { data: GetPostEntity[] }>(

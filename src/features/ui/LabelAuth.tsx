@@ -1,7 +1,6 @@
-import React from "react";
-import { extendTheme, Text, Flex } from "@chakra-ui/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Flex, Text } from "@chakra-ui/react";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 interface LabelAuthProps {
   fontWeight?: string;
   fontColor?: string;
@@ -13,14 +12,7 @@ interface LabelAuthProps {
   hour?: string;
 }
 
-const theme = extendTheme({
-  fontWeights: {
-    bold: 700,
-    semibold: 600,
-    medium: 500,
-    light: 300,
-  },
-});
+
 export default function TitleAuth({
   fontColor,
   fontWeight,

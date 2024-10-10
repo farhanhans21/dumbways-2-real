@@ -3,11 +3,8 @@ import {
   Box,
   Button,
   Flex,
-  Grid,
-  GridItem,
-  Text,
+  Text
 } from "@chakra-ui/react";
-import React from "react";
 
 function ProfileInfoThreads() {
   return (

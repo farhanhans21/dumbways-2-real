@@ -1,11 +1,10 @@
-import React from "react";
-import SideBars from "./sidebar/SideBars";
-import ProfileInfo from "./sidebar/ProfileInfo";
 import {
-  Flex,
   Box,
+  Flex,
 } from "@chakra-ui/react";
 import { Outlet } from "react-router-dom";
+import ProfileInfo from "./sidebar/ProfileInfo";
+import SideBars from "./sidebar/SideBars";
 function Base() {
   return (
     <Flex minWidth="max-content">

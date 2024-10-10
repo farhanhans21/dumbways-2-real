@@ -1,16 +1,15 @@
-import React from "react";
 
 import {
-  Card,
-  Input,
-  CardBody,
   Box,
+  Button,
+  Card,
+  CardBody,
   Container,
   FormControl,
-  Button
+  Input
 } from "@chakra-ui/react";
-import userResetForm from "../hooks/use-reset-form"
-import TitleAuth, { LabelAuth } from "../../ui/LabelAuth";
+import TitleAuth from "../../ui/LabelAuth";
+import userResetForm from "../hooks/use-reset-form";
 
 function ResetForm() {
 

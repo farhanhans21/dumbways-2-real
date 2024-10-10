@@ -1,20 +1,17 @@
-import React from "react";
 
-import { Box, Text, Button, Flex } from "@chakra-ui/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Box, Button, Text } from "@chakra-ui/react";
 import {
+  faDoorOpen,
+  faHeart,
   faHouse,
   faMagnifyingGlass,
-  faHeart,
   faUser,
-  faDoorOpen,
 } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ButtonLink from "../../../buttons/LinkButton";
 function SideBars() {
   return (
     <>
-      {/* <Flex align="start" justify="start"> */}
 
       <Text
         fontSize="5xl"
