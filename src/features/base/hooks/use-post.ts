@@ -18,7 +18,7 @@ export function usePost() {
     resolver: zodResolver(postSchema),
   });
   const queryClient = useQueryClient();
-  const { id: authorId } = useAppSelector((state) => state.auth);
+  const { id:authorId } = useAppSelector((state) => state.auth);
   console.log(useAppSelector((state)=> state.auth))
   
   async function getPosts() {

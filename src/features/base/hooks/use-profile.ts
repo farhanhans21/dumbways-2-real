@@ -9,7 +9,7 @@ export function usePostProfile() {
 
     async function getAllPosts() {
         const response = await apiV1.get<null, { data: GetPostEntity[] }>(
-            `/profile/post/${userId}`
+            `/getPostbyUserId/${userId}`
         );
         return response.data;
     }
