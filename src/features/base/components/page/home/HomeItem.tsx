@@ -1,21 +1,13 @@
-import {
-  Avatar,
-  Box,
-  Container,
-  Image,
-  Text
-} from "@chakra-ui/react";
+import { Avatar, Box, Container, Image, Text } from "@chakra-ui/react";
 import ButtonLink from "../../../buttons/LinkButton";
 import { userAllPosts } from "../../../hooks/use-all";
 
 function HomeItem() {
-
-
   const { data } = userAllPosts();
 
   return (
     <>
-      {data?.map((post) => {
+      {data?.map((post) => (
         <Box
           borderBottom="1px solid grey"
           display="flex"
@@ -28,7 +20,7 @@ function HomeItem() {
             src="https://media.suara.com/pictures/653x366/2018/03/04/88826-mia-khalifa-instagram.jpg"
           />
           <div style={{ margin: "5px" }}>
-            <Text fontSize={"12px"} fontWeight={"bold"}>
+            <Text fontSize={"12px"}color={"white"} mb={3} mt={3} fontWeight={"bold"}>
               {post.author.fullName}
               <Text as={"span"} color={"home.link"} ms={"3px"}>
                 @{post.author.userName} • {post.timeAgo}
@@ -62,8 +54,8 @@ function HomeItem() {
               </Text>
             </ButtonLink>
           </div>
-        </Box>;
-      })}
+        </Box>
+      ))}
     </>
   );
 }

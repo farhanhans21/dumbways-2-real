@@ -9,6 +9,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ButtonLink from "../../../buttons/LinkButton";
+import { useLogout } from "../../../hooks/logout";
+
+// const logout = useLogout()
 function SideBars() {
   return (
     <>
@@ -113,6 +116,7 @@ function SideBars() {
           background= {"none"}
           cursor= {"pointer"}
           to={"/login"}
+          // onClick={logout}
       >
         <FontAwesomeIcon icon={faDoorOpen} size="xl" color="white" />
         <Text fontSize="l" color="white" ml={2}>

@@ -23,7 +23,7 @@ export function usePost() {
   
   async function getPosts() {
     const response = await apiV1.get<null, { data: GetPostEntity[] }>(
-      `/getPostbyAuthorId/${authorId}`
+      `/get-post-by-authorId/${authorId}`
     );
     return response.data;
   }
@@ -42,7 +42,7 @@ export function usePost() {
     if (data.image) {
       formData.append("image", data.image[0]);
     }
-    const response = await apiV1.post(`/createPost`, formData, {
+    const response = await apiV1.post(`/create-post`, formData, {
       headers: {
         Authorization: `Bearer ${Cookies.get("token")}`,
         "Content-Type": "multipart/form-data",

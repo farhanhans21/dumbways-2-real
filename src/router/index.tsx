@@ -12,8 +12,9 @@ import FollowingItem from '../features/base/components/page/follows/FollowingIte
 function AppRouter() {
   
     const router =  createBrowserRouter([
+
       {
-        path: "/login",
+        path: "/",
         element: <LoginForm/>
         
       },
@@ -30,7 +31,7 @@ function AppRouter() {
         element:<ResetForm/>
       },
       {
-        path:"/",
+        path:"/dashboard",
         element:<Base/>,
         children:[
           {

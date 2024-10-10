@@ -4,10 +4,10 @@ import { useParams } from "react-router-dom";
 import { GetPostEntity } from "../../../entities/post-entity";
 import { UserEntity } from "../../../entities/user-entity";
 import { apiV1 } from "../../../libs/api";
-export function userAllPosts() {
+export function userAllPosts() {  
   async function getAllPosts() {
     const response = await apiV1.get<null, { data: GetPostEntity[] }>(
-      `/getAllPosts`,
+      `/get-all-post`,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
