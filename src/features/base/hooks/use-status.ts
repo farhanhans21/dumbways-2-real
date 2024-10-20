@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { GetPostEntity } from "../../../entities/post-entity";
+import { GetPostEntity } from "../../../entities/threads-entity";
 import { apiV1 } from "../../../libs/api";
 
 export function usePostDetail(postId: number) {

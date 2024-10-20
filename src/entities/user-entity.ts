@@ -1,17 +1,19 @@
-import { GetPostEntity } from "./post-entity";
-import { RoleEnum } from "./role-entity";
+import { GetProfileEntityByUser } from "./profile-entity";
 
-export interface UserEntity {
-    id: number;
-    email?: string;
-    password: string;
-    fullName?: string;
-    userName?: string;
-    bio?: string;
-    following: number;
-    followers: number;
-    role: RoleEnum;
-    createdAt: Date;
-    updatedAt: Date;
-    post: GetPostEntity[];
+export interface CreateRegister {
+  id: number;
+  email: string;
+  password: string;
+  username: string;
+}
+export interface CheckAuth{
+  fullname: string;
+  biography: string;
+  avatarUrl: string;
+  background: string;
+}
+
+export interface Search {
+  username: Pick<CreateRegister, 'username'>;
+  profile: GetProfileEntityByUser;
 }

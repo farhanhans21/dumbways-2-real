@@ -1,27 +1,12 @@
-import {
-  Avatar,
-  Box,
-  Button,
-  HStack,
-  Text,
-  VStack
-} from "@chakra-ui/react";
-
+import { Avatar, Box, Button, HStack, Text, VStack } from "@chakra-ui/react";
+import { useAllUsers } from "../base/hooks/use-all";
+import { useState } from "react";
 function Followers() {
-  
-  const users = [
-    {
-      name: "Shakia Kimathi",
-      username: "@shakiakim",
-      avatarUrl: "https://media.muckrack.com/profile/images/15626118/eva-elfie_01.jpg.256x256_q100_crop-smart.jpg",
-    },
-    {
-      name: "Naveen Singh",
-      username: "@naveeeen",
-      avatarUrl: "https://i.pinimg.com/originals/9e/90/56/9e9056bbcc2a4a6de19b70c318275f65.jpg",
-    },
-  ];
-
+  const { data } = useAllUsers();
+  const [isFollowing, setIsFollowing] = useState(false);
+  const toggleFollow = () => {
+    setIsFollowing(!isFollowing);
+  };
   return (
     <>
       <Box
@@ -34,19 +19,22 @@ function Followers() {
         position="relative"
       >
         <VStack align="start" spacing={4}>
-          {users.map((user, index) => (
-            <HStack key={index} spacing={4} w="full" justify="space-between">
+          {data?.map((user) => (
+            <HStack key={user.id} spacing={4} w="full" justify="space-between">
               <HStack spacing={3}>
-                <Avatar src={user.avatarUrl} name={user.name} />
+                <Avatar src={""} name={user.userName} />
                 <VStack align="start" spacing={0}>
                   <Text color="white" fontWeight="bold">
-                    {user.name}
+                    {user.fullName}
                   </Text>
-                  <Text color="gray.400">{user.username}</Text>
+                  <Text color="gray.400">{user.userName}</Text>
                 </VStack>
               </HStack>
-              <Button colorScheme="green" rounded={30} variant="outline">
-                Follow
+              <Button
+                colorScheme={isFollowing ? "red" : "blue"}
+                onClick={toggleFollow}
+              >
+                {isFollowing ? "Unfollow" : "Follow"}
               </Button>
             </HStack>
           ))}

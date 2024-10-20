@@ -20,7 +20,7 @@ function HomePost() {
   return (
     <Grid>
       <GridItem>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} encType="multipart/from-data">
           <Box borderBottom="1px solid grey" display="flex" flexDirection="row">
             <Avatar
               m={6}
@@ -43,7 +43,7 @@ function HomePost() {
                     icon={faImage}
                   />
                 </FormLabel>
-                <Input hidden type="file" {...register("image")} />
+                <Input hidden type="file" {...register("image")} name="image" />
               </FormControl>
 
               <Button

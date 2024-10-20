@@ -2,7 +2,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import Cookies from "js-cookie";
 import { useForm } from "react-hook-form";
-import { GetPostEntity } from "../../../entities/post-entity";
+import { GetPostEntity } from "../../../entities/threads-entity";
 import { apiV1 } from "../../../libs/api";
 import { useAppSelector } from "../../store/hooks/use-store";
 import { CreatePostForm, postSchema } from "../schema/post-schema";
@@ -18,9 +18,8 @@ export function usePost() {
     resolver: zodResolver(postSchema),
   });
   const queryClient = useQueryClient();
-  const { id:authorId } = useAppSelector((state) => state.auth);
-  console.log(useAppSelector((state)=> state.auth))
-  
+  const { id: authorId } = useAppSelector((state) => state.auth);
+
   async function getPosts() {
     const response = await apiV1.get<null, { data: GetPostEntity[] }>(
       `/get-post-by-authorId/${authorId}`
@@ -39,13 +38,12 @@ export function usePost() {
     const formData = new FormData();
     formData.append("content", data.content?.toString() ?? "");
     formData.append("authorId", authorId?.toString());
-    if (data.image) {
+    if (data.image && data.image.length > 0) {
       formData.append("image", data.image[0]);
     }
     const response = await apiV1.post(`/create-post`, formData, {
       headers: {
         Authorization: `Bearer ${Cookies.get("token")}`,
-        "Content-Type": "multipart/form-data",
       },
     });
 

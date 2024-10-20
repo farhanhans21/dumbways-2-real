@@ -14,7 +14,7 @@ function AppRouter() {
     const router =  createBrowserRouter([
 
       {
-        path: "/",
+        path: "/login",
         element: <LoginForm/>
         
       },
@@ -31,7 +31,7 @@ function AppRouter() {
         element:<ResetForm/>
       },
       {
-        path:"/dashboard",
+        path:"/",
         element:<Base/>,
         children:[
           {

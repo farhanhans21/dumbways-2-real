@@ -10,7 +10,6 @@ import { useAppSelector } from "../../../store/hooks/use-store";
 function Base() {
 
   const user = useAppSelector((state)=> state.auth)
-  const location = useLocation()
 
   if (!Object.keys(user).length) {
     return <Navigate to={"/login"}/>

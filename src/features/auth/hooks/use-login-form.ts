@@ -12,7 +12,7 @@ import { useForm } from "react-hook-form";
 export function useLoginForm() {
     const {
         register,
-        handleSubmit,
+        handleSubmit,// function yg dikembalikan useform
         setError,
         formState: { errors },
       } = useForm<LoginFormInput>({
@@ -32,7 +32,7 @@ export function useLoginForm() {
           const { user, token } = response.data;
     
           dispatch(setUser(user));
-          Cookies.set("token", token, { expires: 1 });
+          Cookies.set("token", token, { expires: 1  });
           navigate("/", { replace: true });
     
           console.log(data);
